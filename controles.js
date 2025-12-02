@@ -1,9 +1,8 @@
 /**
- * CONTROLES DEL JUGADOR V18 - MOUSE & TOUCH UNIFICADOS
- * - Click Izquierdo / Un dedo: Joystick virtual de movimiento (Mover).
- * - Click Derecho / Dos dedos: Rotación de cámara.
- * - Rueda del ratón: Zoom.
- * - Teclado (WASD): Movimiento clásico.
+ * CONTROLES DEL JUGADOR V19 - TERCERA PERSONA (HOMBRO) & TOUCH
+ * - Cámara: Estilo TPS (Third Person Shooter) ubicada sobre el hombro derecho.
+ * - Input: Unificado (Touch Joystick + Mouse Click + WASD).
+ * - Ajuste Mobile: Ángulos y distancias calibrados para inmersión cómoda.
  */
 import * as THREE from 'three';
 import { TerrainHeight } from './mapa_relieve.js';
@@ -22,8 +21,8 @@ export class PlayerController {
         // Movimiento
         this.speed = 5.0;
         this.runSpeed = 12.0;       
-        this.rotateSpeed = 0.003;   
-        this.touchRotateSpeed = 0.005; 
+        this.rotateSpeed = 0.002;      // Rotación más suave para vista cercana
+        this.touchRotateSpeed = 0.004; // Sensibilidad táctil ajustada
         
         // Gravedad y Saltos
         this.gravity = 4.0;         
@@ -41,12 +40,12 @@ export class PlayerController {
         this.velocity = new THREE.Vector3(0, 0, 0); 
         this.onGround = false;
 
-        // --- CÁMARA ---
-        this.zoomDistance = 100;
-        this.minZoom = 20; 
-        this.maxZoom = 250;
+        // --- CÁMARA TERCERA PERSONA ---
+        this.zoomDistance = 50; // Mucho más cerca (Antes 100)
+        this.minZoom = 25;      // Permite acercarse mucho
+        this.maxZoom = 120;     // Evita alejarse demasiado (rompe la inmersión)
         this.currentCameraAngle = 0;
-        this.cameraSmoothing = 0.15;
+        this.cameraSmoothing = 0.1; // Más rápido para seguir al jugador de cerca
 
         // --- INPUTS ---
         this.keys = { w: false, a: false, s: false, d: false, shift: false, space: false };
@@ -64,8 +63,8 @@ export class PlayerController {
         // Estado Táctil
         this.touchState = {
             active: false,
-            moving: false, // Un dedo
-            rotating: false, // Dos dedos
+            moving: false, 
+            rotating: false,
             touchX: 0,
             touchY: 0,
             prevTouchX: 0
@@ -205,7 +204,6 @@ export class PlayerController {
     }
 
     update(time) {
-        // Vectores de dirección
         const forward = new THREE.Vector3(0, 0, 1).applyAxisAngle(new THREE.Vector3(0, 1, 0), this.currentCameraAngle);
         const right = new THREE.Vector3(1, 0, 0).applyAxisAngle(new THREE.Vector3(0, 1, 0), this.currentCameraAngle);
         
@@ -241,8 +239,6 @@ export class PlayerController {
             
             // Zona muerta
             if (Math.abs(dx) > 0.1 || Math.abs(dy) > 0.1) {
-                // dy negativo (arriba) = avanzar (forward negativo)
-                // dx positivo (derecha) = derecha (right positivo)
                 this._moveDir.add(forward.clone().multiplyScalar(dy));
                 this._moveDir.add(right.clone().multiplyScalar(dx));
             }
@@ -312,20 +308,33 @@ export class PlayerController {
 
     updateCamera() {
         const angleRad = this.currentCameraAngle;
+        
+        // --- LÓGICA DE CÁMARA TERCERA PERSONA (OVER SHOULDER) ---
+        // 1. Posición base detrás del jugador
         const offsetX = Math.sin(angleRad) * this.zoomDistance;
         const offsetZ = Math.cos(angleRad) * this.zoomDistance;
-        const offsetY = this.zoomDistance * 1.0; // Vista elevada
+        
+        // 2. Altura ajustada: Más bajo que antes para ver la espalda, 
+        // pero lo suficiente para ver por encima de la cabeza.
+        const offsetY = this.zoomDistance * 0.35 + 12;
+
+        // 3. DESPLAZAMIENTO LATERAL (HOMBRO DERECHO)
+        // Esto desplaza la cámara a la derecha del personaje, dejándolo a la izquierda en pantalla.
+        const shoulderOffset = 8.0; 
+        // Vector "derecha" relativo a la rotación de la cámara (cos, -sin)
+        const sideX = Math.cos(angleRad) * shoulderOffset;
+        const sideZ = -Math.sin(angleRad) * shoulderOffset;
 
         const lookTarget = new THREE.Vector3(
             this.player.position.x, 
-            this.player.position.y + this.playerHeight, 
+            this.player.position.y + this.playerHeight * 0.85, // Mirar al cuello
             this.player.position.z
         );
 
         const desiredPos = new THREE.Vector3(
-            this.player.position.x + offsetX,
+            this.player.position.x + offsetX + sideX,
             this.player.position.y + offsetY + this.playerHeight,
-            this.player.position.z + offsetZ
+            this.player.position.z + offsetZ + sideZ
         );
 
         this.camera.position.lerp(desiredPos, this.cameraSmoothing);
