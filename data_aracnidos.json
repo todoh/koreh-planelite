@@ -1,0 +1,29 @@
+{
+  "black_widow_sim": {
+    "id": "black_widow_sim",
+    "name": "Viuda Geométrica",
+    "type": "arachnid",
+    "config": {
+      "bodySize": 18,
+      "legSpan": 60,
+      "legCount": 8,
+      "colorBody": [0, 10],
+      "hasStinger": false,
+      "aggressiveness": 0.2
+    }
+  },
+  "scorpion_king": {
+    "id": "scorpion_king",
+    "name": "Escorpión Emperador",
+    "type": "arachnid",
+    "config": {
+      "bodySize": 25,
+      "legSpan": 40,
+      "legCount": 8,
+      "colorBody": [40, 60],
+      "hasStinger": true,
+      "tailLength": 50,
+      "aggressiveness": 0.8
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "octopus_gigas": {
+    "id": "octopus_gigas",
+    "name": "Pulpo de Profundidad",
+    "type": "cephalopod",
+    "config": {
+      "headSize": 35,
+      "tentacles": 8,
+      "length": 90,
+      "curl": 2.5,
+      "colorSkin": [260, 280],
+      "suctionCups": true,
+      "speed": 0.002
+    }
+  },
+  "cuttlefish_royal": {
+    "id": "cuttlefish_royal",
+    "name": "Sepia Real",
+    "type": "cephalopod",
+    "config": {
+      "headSize": 25,
+      "tentacles": 10,
+      "length": 50,
+      "curl": 0.5,
+      "colorSkin": [30, 50],
+      "suctionCups": false,
+      "speed": 0.004
+    }
+  }
+}

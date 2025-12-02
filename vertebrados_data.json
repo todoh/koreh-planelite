@@ -1,0 +1,280 @@
+{
+  "deer": {
+    "id": "deer",
+    "name": "Ciervo Real",
+    "type": "vertebrate",
+    "config": {
+      "colorSkin": [25, 35],
+      "colorDetail": [15, 20],
+      "scale": 1.0,
+      "speed": 0.004,
+      "hasFur": true,
+      "structure": [
+        { "name": "torso", "type": "bone", "len": 75, "width": 38, "widthEnd": 32, "angle": 0, "parent": null, "anim": "bob" },
+        
+        { "name": "neck", "type": "bone", "len": 30, "width": 16, "widthEnd": 12, "angle": -55, "parent": "torso", "attachRatio": 0.92, "anim": "look" },
+        
+        { "name": "head_base", "type": "head_cranial", "len": 22, "width": 14, "widthEnd": 12, "angle": 50, "parent": "neck", "attachRatio": 1.0, "anim": "look" },
+        { "name": "snout", "type": "head_snout", "len": 14, "width": 10, "widthEnd": 6, "angle": 0, "parent": "head_base", "attachRatio": 0.9, "anim": "none" },
+        
+        { "name": "earL", "type": "bone", "len": 18, "width": 6, "angle": -110, "parent": "head_base", "attachRatio": 0.1, "anim": "ear" },
+        { "name": "earR", "type": "bone", "len": 18, "width": 6, "angle": -70, "parent": "head_base", "attachRatio": 0.1, "anim": "ear" },
+        
+        { "name": "antlers", "type": "antler", "len": 35, "width": 3, "angle": -95, "parent": "head_base", "attachRatio": 0.15, "anim": "none" },
+
+        { "name": "tail", "type": "bone", "len": 22, "width": 12, "angle": 165, "parent": "torso", "attachRatio": 0.02, "anim": "tail" },
+
+        { "name": "legFL_A", "type": "bone", "len": 32, "width": 14, "widthEnd": 10, "angle": 85, "parent": "torso", "attachRatio": 0.82, "anim": "walk" },
+        { "name": "legFL_B", "type": "bone", "len": 28, "width": 10, "widthEnd": 6, "angle": 5, "parent": "legFL_A", "attachRatio": 1.0, "anim": "knee_back" },
+        { "name": "hoofFL", "type": "hoof", "len": 10, "width": 8, "angle": 0, "parent": "legFL_B", "attachRatio": 1.0, "anim": "none" },
+
+        { "name": "legFR_A", "type": "bone", "len": 32, "width": 14, "widthEnd": 10, "angle": 85, "parent": "torso", "attachRatio": 0.82, "anim": "walk_opp" },
+        { "name": "legFR_B", "type": "bone", "len": 28, "width": 10, "widthEnd": 6, "angle": 5, "parent": "legFR_A", "attachRatio": 1.0, "anim": "knee_back" },
+        { "name": "hoofFR", "type": "hoof", "len": 10, "width": 8, "angle": 0, "parent": "legFR_B", "attachRatio": 1.0, "anim": "none" },
+
+        { "name": "legBL_A", "type": "bone", "len": 38, "width": 22, "widthEnd": 14, "angle": 75, "parent": "torso", "attachRatio": 0.12, "anim": "walk_opp" },
+        { "name": "legBL_B", "type": "bone", "len": 32, "width": 12, "widthEnd": 9, "angle": -15, "parent": "legBL_A", "attachRatio": 1.0, "anim": "knee_fwd" },
+        { "name": "hoofBL", "type": "hoof", "len": 10, "width": 8, "angle": 10, "parent": "legBL_B", "attachRatio": 1.0, "anim": "none" },
+
+        { "name": "legBR_A", "type": "bone", "len": 38, "width": 22, "widthEnd": 14, "angle": 75, "parent": "torso", "attachRatio": 0.12, "anim": "walk" },
+        { "name": "legBR_B", "type": "bone", "len": 32, "width": 12, "widthEnd": 9, "angle": -15, "parent": "legBR_A", "attachRatio": 1.0, "anim": "knee_fwd" },
+        { "name": "hoofBR", "type": "hoof", "len": 10, "width": 8, "angle": 10, "parent": "legBR_B", "attachRatio": 1.0, "anim": "none" }
+      ]
+    }
+  },
+  "bear": {
+    "id": "bear",
+    "name": "Oso Pardo",
+    "type": "vertebrate",
+    "config": {
+      "colorSkin": [0, 20],
+      "colorDetail": [30, 40],
+      "scale": 1.2,
+      "speed": 0.003,
+      "hasFur": true,
+      "structure": [
+        { "name": "torso", "type": "bone", "len": 90, "width": 60, "widthEnd": 50, "angle": 0, "parent": null, "anim": "bob" },
+        { "name": "neck", "type": "bone", "len": 20, "width": 45, "widthEnd": 35, "angle": -20, "parent": "torso", "attachRatio": 0.95, "anim": "look" },
+        { "name": "head_base", "type": "head_cranial", "len": 25, "width": 35, "widthEnd": 25, "angle": -10, "parent": "neck", "attachRatio": 1.0, "anim": "look" },
+        { "name": "snout", "type": "head_snout", "len": 15, "width": 25, "widthEnd": 15, "angle": 0, "parent": "head_base", "attachRatio": 0.9, "anim": "none" },
+        { "name": "earL", "type": "bone", "len": 10, "width": 10, "angle": -120, "parent": "head_base", "attachRatio": 0.3, "anim": "ear" },
+
+        { "name": "legFL_A", "type": "bone", "len": 35, "width": 25, "widthEnd": 20, "angle": 85, "parent": "torso", "attachRatio": 0.85, "anim": "walk" },
+        { "name": "legFL_B", "type": "bone", "len": 30, "width": 18, "widthEnd": 15, "angle": 5, "parent": "legFL_A", "attachRatio": 1.0, "anim": "knee_back" },
+        
+        { "name": "legFR_A", "type": "bone", "len": 35, "width": 25, "widthEnd": 20, "angle": 85, "parent": "torso", "attachRatio": 0.85, "anim": "walk_opp" },
+        { "name": "legFR_B", "type": "bone", "len": 30, "width": 18, "widthEnd": 15, "angle": 5, "parent": "legFR_A", "attachRatio": 1.0, "anim": "knee_back" },
+
+        { "name": "legBL_A", "type": "bone", "len": 40, "width": 30, "widthEnd": 22, "angle": 80, "parent": "torso", "attachRatio": 0.15, "anim": "walk_opp" },
+        { "name": "legBL_B", "type": "bone", "len": 30, "width": 20, "widthEnd": 18, "angle": 10, "parent": "legBL_A", "attachRatio": 1.0, "anim": "knee_fwd" },
+
+        { "name": "legBR_A", "type": "bone", "len": 40, "width": 30, "widthEnd": 22, "angle": 80, "parent": "torso", "attachRatio": 0.15, "anim": "walk" },
+        { "name": "legBR_B", "type": "bone", "len": 30, "width": 20, "widthEnd": 18, "angle": 10, "parent": "legBR_A", "attachRatio": 1.0, "anim": "knee_fwd" }
+      ]
+    }
+  }
+
+,
+
+  "zebra": {
+    "id": "zebra",
+    "name": "Cebra de Llanura",
+    "type": "vertebrate",
+    "config": {
+      "colorSkin": [0, 0],
+      "colorDetail": [0, 0],
+      "scale": 1.0,
+      "speed": 0.005,
+      "hasFur": true,
+      "structure": [
+        { "name": "torso", "type": "bone", "len": 75, "width": 42, "widthEnd": 36, "angle": 0, "parent": null, "anim": "bob" },
+        
+        { "name": "neck", "type": "bone", "len": 40, "width": 20, "widthEnd": 14, "angle": -50, "parent": "torso", "attachRatio": 0.9, "anim": "look" },
+        { "name": "head", "type": "head_cranial", "len": 28, "width": 16, "widthEnd": 12, "angle": 40, "parent": "neck", "attachRatio": 1.0, "anim": "look" },
+        { "name": "snout", "type": "head_snout", "len": 18, "width": 12, "widthEnd": 8, "angle": 0, "parent": "head", "attachRatio": 0.9, "anim": "none" },
+        
+        { "name": "earL", "type": "bone", "len": 12, "width": 6, "angle": -100, "parent": "head", "attachRatio": 0.2, "anim": "ear" },
+        { "name": "mane", "type": "bone", "len": 35, "width": 8, "angle": 170, "parent": "neck", "attachRatio": 0.5, "anim": "none" },
+
+        { "name": "tail", "type": "bone", "len": 45, "width": 6, "angle": 150, "parent": "torso", "attachRatio": 0.02, "anim": "tail" },
+
+        { "name": "legFL_A", "type": "bone", "len": 38, "width": 14, "widthEnd": 10, "angle": 80, "parent": "torso", "attachRatio": 0.82, "anim": "walk" },
+        { "name": "legFL_B", "type": "bone", "len": 32, "width": 10, "widthEnd": 8, "angle": 5, "parent": "legFL_A", "attachRatio": 1.0, "anim": "knee_back" },
+        { "name": "hoofFL", "type": "hoof", "len": 10, "width": 10, "angle": 0, "parent": "legFL_B", "attachRatio": 1.0, "anim": "none" },
+
+        { "name": "legFR_A", "type": "bone", "len": 38, "width": 14, "widthEnd": 10, "angle": 80, "parent": "torso", "attachRatio": 0.82, "anim": "walk_opp" },
+        { "name": "legFR_B", "type": "bone", "len": 32, "width": 10, "widthEnd": 8, "angle": 5, "parent": "legFR_A", "attachRatio": 1.0, "anim": "knee_back" },
+        { "name": "hoofFR", "type": "hoof", "len": 10, "width": 10, "angle": 0, "parent": "legFR_B", "attachRatio": 1.0, "anim": "none" },
+
+        { "name": "legBL_A", "type": "bone", "len": 42, "width": 20, "widthEnd": 14, "angle": 75, "parent": "torso", "attachRatio": 0.12, "anim": "walk_opp" },
+        { "name": "legBL_B", "type": "bone", "len": 36, "width": 12, "widthEnd": 10, "angle": -10, "parent": "legBL_A", "attachRatio": 1.0, "anim": "knee_fwd" },
+        { "name": "hoofBL", "type": "hoof", "len": 10, "width": 10, "angle": 10, "parent": "legBL_B", "attachRatio": 1.0, "anim": "none" },
+
+        { "name": "legBR_A", "type": "bone", "len": 42, "width": 20, "widthEnd": 14, "angle": 75, "parent": "torso", "attachRatio": 0.12, "anim": "walk" },
+        { "name": "legBR_B", "type": "bone", "len": 36, "width": 12, "widthEnd": 10, "angle": -10, "parent": "legBR_A", "attachRatio": 1.0, "anim": "knee_fwd" },
+        { "name": "hoofBR", "type": "hoof", "len": 10, "width": 10, "angle": 10, "parent": "legBR_B", "attachRatio": 1.0, "anim": "none" }
+      ]
+    }
+  },
+  "giraffe": {
+    "id": "giraffe",
+    "name": "Jirafa Savanera",
+    "type": "vertebrate",
+    "config": {
+      "colorSkin": [30, 45],
+      "colorDetail": [20, 30],
+      "scale": 0.8,
+      "speed": 0.003,
+      "hasFur": true,
+      "structure": [
+        { "name": "torso", "type": "bone", "len": 70, "width": 45, "widthEnd": 35, "angle": -15, "parent": null, "anim": "bob" },
+        
+        { "name": "neck", "type": "bone", "len": 120, "width": 20, "widthEnd": 12, "angle": -65, "parent": "torso", "attachRatio": 0.95, "anim": "look" },
+        { "name": "head", "type": "head_cranial", "len": 25, "width": 14, "widthEnd": 10, "angle": 55, "parent": "neck", "attachRatio": 1.0, "anim": "look" },
+        { "name": "snout", "type": "head_snout", "len": 18, "width": 10, "widthEnd": 6, "angle": 0, "parent": "head", "attachRatio": 0.9, "anim": "none" },
+        
+        { "name": "ossiconeL", "type": "bone", "len": 8, "width": 4, "angle": -80, "parent": "head", "attachRatio": 0.7, "anim": "none" },
+        { "name": "ossiconeR", "type": "bone", "len": 8, "width": 4, "angle": -100, "parent": "head", "attachRatio": 0.7, "anim": "none" },
+        { "name": "earL", "type": "bone", "len": 10, "width": 6, "angle": -110, "parent": "head", "attachRatio": 0.3, "anim": "ear" },
+
+        { "name": "tail", "type": "bone", "len": 50, "width": 4, "angle": 80, "parent": "torso", "attachRatio": 0.05, "anim": "tail" },
+
+        { "name": "legFL_A", "type": "bone", "len": 65, "width": 12, "widthEnd": 10, "angle": 85, "parent": "torso", "attachRatio": 0.9, "anim": "walk" },
+        { "name": "legFL_B", "type": "bone", "len": 60, "width": 9, "widthEnd": 7, "angle": 0, "parent": "legFL_A", "attachRatio": 1.0, "anim": "knee_back" },
+        { "name": "hoofFL", "type": "hoof", "len": 12, "width": 10, "angle": 0, "parent": "legFL_B", "attachRatio": 1.0, "anim": "none" },
+
+        { "name": "legFR_A", "type": "bone", "len": 65, "width": 12, "widthEnd": 10, "angle": 85, "parent": "torso", "attachRatio": 0.9, "anim": "walk_opp" },
+        { "name": "legFR_B", "type": "bone", "len": 60, "width": 9, "widthEnd": 7, "angle": 0, "parent": "legFR_A", "attachRatio": 1.0, "anim": "knee_back" },
+        { "name": "hoofFR", "type": "hoof", "len": 12, "width": 10, "angle": 0, "parent": "legFR_B", "attachRatio": 1.0, "anim": "none" },
+
+        { "name": "legBL_A", "type": "bone", "len": 60, "width": 18, "widthEnd": 12, "angle": 80, "parent": "torso", "attachRatio": 0.1, "anim": "walk_opp" },
+        { "name": "legBL_B", "type": "bone", "len": 65, "width": 10, "widthEnd": 8, "angle": -5, "parent": "legBL_A", "attachRatio": 1.0, "anim": "knee_fwd" },
+        { "name": "hoofBL", "type": "hoof", "len": 12, "width": 10, "angle": 5, "parent": "legBL_B", "attachRatio": 1.0, "anim": "none" },
+        
+        { "name": "legBR_A", "type": "bone", "len": 60, "width": 18, "widthEnd": 12, "angle": 80, "parent": "torso", "attachRatio": 0.1, "anim": "walk" },
+        { "name": "legBR_B", "type": "bone", "len": 65, "width": 10, "widthEnd": 8, "angle": -5, "parent": "legBR_A", "attachRatio": 1.0, "anim": "knee_fwd" },
+        { "name": "hoofBR", "type": "hoof", "len": 12, "width": 10, "angle": 5, "parent": "legBR_B", "attachRatio": 1.0, "anim": "none" }
+      ]
+    }
+  },
+  "rhino": {
+    "id": "rhino",
+    "name": "Rinoceronte Gris",
+    "type": "vertebrate",
+    "config": {
+      "colorSkin": [200, 220],
+      "colorDetail": [200, 210],
+      "scale": 1.1,
+      "speed": 0.003,
+      "hasFur": false,
+      "structure": [
+        { "name": "torso", "type": "bone", "len": 85, "width": 55, "widthEnd": 48, "angle": 2, "parent": null, "anim": "bob" },
+        
+        { "name": "neck", "type": "bone", "len": 25, "width": 40, "widthEnd": 30, "angle": -30, "parent": "torso", "attachRatio": 0.95, "anim": "look" },
+        { "name": "head", "type": "head_cranial", "len": 35, "width": 28, "widthEnd": 20, "angle": 10, "parent": "neck", "attachRatio": 1.0, "anim": "look" },
+        { "name": "snout", "type": "head_snout", "len": 15, "width": 20, "widthEnd": 12, "angle": 10, "parent": "head", "attachRatio": 0.9, "anim": "none" },
+        
+        { "name": "horn_big", "type": "bone", "len": 20, "width": 8, "widthEnd": 2, "angle": -80, "parent": "snout", "attachRatio": 0.5, "anim": "none" },
+        { "name": "horn_small", "type": "bone", "len": 10, "width": 6, "widthEnd": 2, "angle": -80, "parent": "head", "attachRatio": 0.8, "anim": "none" },
+        
+        { "name": "earL", "type": "bone", "len": 10, "width": 6, "angle": -120, "parent": "head", "attachRatio": 0.2, "anim": "ear" },
+
+        { "name": "legFL_A", "type": "bone", "len": 30, "width": 22, "widthEnd": 18, "angle": 85, "parent": "torso", "attachRatio": 0.85, "anim": "walk" },
+        { "name": "legFL_B", "type": "bone", "len": 25, "width": 16, "widthEnd": 14, "angle": 0, "parent": "legFL_A", "attachRatio": 1.0, "anim": "knee_back" },
+        { "name": "hoofFL", "type": "hoof", "len": 10, "width": 14, "angle": 0, "parent": "legFL_B", "attachRatio": 1.0, "anim": "none" },
+
+        { "name": "legFR_A", "type": "bone", "len": 30, "width": 22, "widthEnd": 18, "angle": 85, "parent": "torso", "attachRatio": 0.85, "anim": "walk_opp" },
+        { "name": "legFR_B", "type": "bone", "len": 25, "width": 16, "widthEnd": 14, "angle": 0, "parent": "legFR_A", "attachRatio": 1.0, "anim": "knee_back" },
+        { "name": "hoofFR", "type": "hoof", "len": 10, "width": 14, "angle": 0, "parent": "legFR_B", "attachRatio": 1.0, "anim": "none" },
+
+        { "name": "legBL_A", "type": "bone", "len": 35, "width": 25, "widthEnd": 20, "angle": 80, "parent": "torso", "attachRatio": 0.15, "anim": "walk_opp" },
+        { "name": "legBL_B", "type": "bone", "len": 28, "width": 18, "widthEnd": 15, "angle": 5, "parent": "legBL_A", "attachRatio": 1.0, "anim": "knee_fwd" },
+        { "name": "hoofBL", "type": "hoof", "len": 10, "width": 14, "angle": 5, "parent": "legBL_B", "attachRatio": 1.0, "anim": "none" },
+
+        { "name": "legBR_A", "type": "bone", "len": 35, "width": 25, "widthEnd": 20, "angle": 80, "parent": "torso", "attachRatio": 0.15, "anim": "walk" },
+        { "name": "legBR_B", "type": "bone", "len": 28, "width": 18, "widthEnd": 15, "angle": 5, "parent": "legBR_A", "attachRatio": 1.0, "anim": "knee_fwd" },
+        { "name": "hoofBR", "type": "hoof", "len": 10, "width": 14, "angle": 5, "parent": "legBR_B", "attachRatio": 1.0, "anim": "none" }
+      ]
+    }
+  },
+  "elephant": {
+    "id": "elephant",
+    "name": "Elefante Antiguo",
+    "type": "vertebrate",
+    "config": {
+      "colorSkin": [210, 230],
+      "colorDetail": [200, 220],
+      "scale": 1.4,
+      "speed": 0.002,
+      "hasFur": false,
+      "structure": [
+        { "name": "torso", "type": "bone", "len": 90, "width": 70, "widthEnd": 60, "angle": -2, "parent": null, "anim": "bob" },
+        
+        { "name": "neck", "type": "bone", "len": 20, "width": 50, "widthEnd": 40, "angle": -30, "parent": "torso", "attachRatio": 0.95, "anim": "look" },
+        { "name": "head", "type": "head_cranial", "len": 35, "width": 45, "widthEnd": 35, "angle": 20, "parent": "neck", "attachRatio": 1.0, "anim": "look" },
+        
+        { "name": "trunk_base", "type": "bone", "len": 20, "width": 18, "widthEnd": 14, "angle": 60, "parent": "head", "attachRatio": 1.0, "anim": "tail" },
+        { "name": "trunk_mid", "type": "bone", "len": 20, "width": 12, "widthEnd": 10, "angle": 10, "parent": "trunk_base", "attachRatio": 1.0, "anim": "tail" },
+        { "name": "trunk_tip", "type": "bone", "len": 15, "width": 8, "widthEnd": 6, "angle": 10, "parent": "trunk_mid", "attachRatio": 1.0, "anim": "tail" },
+
+        { "name": "tuskL", "type": "bone", "len": 25, "width": 6, "widthEnd": 2, "angle": 50, "parent": "head", "attachRatio": 0.8, "anim": "none" },
+        { "name": "tuskR", "type": "bone", "len": 25, "width": 6, "widthEnd": 2, "angle": 60, "parent": "head", "attachRatio": 0.8, "anim": "none" },
+
+        { "name": "earL", "type": "bone", "len": 35, "width": 25, "angle": 100, "parent": "head", "attachRatio": 0.3, "anim": "ear" },
+        { "name": "earR", "type": "bone", "len": 35, "width": 25, "angle": 80, "parent": "head", "attachRatio": 0.3, "anim": "ear" },
+
+        { "name": "legFL_A", "type": "bone", "len": 40, "width": 28, "widthEnd": 24, "angle": 88, "parent": "torso", "attachRatio": 0.88, "anim": "walk" },
+        { "name": "legFL_B", "type": "bone", "len": 35, "width": 22, "widthEnd": 20, "angle": 2, "parent": "legFL_A", "attachRatio": 1.0, "anim": "knee_back" },
+        
+        { "name": "legFR_A", "type": "bone", "len": 40, "width": 28, "widthEnd": 24, "angle": 88, "parent": "torso", "attachRatio": 0.88, "anim": "walk_opp" },
+        { "name": "legFR_B", "type": "bone", "len": 35, "width": 22, "widthEnd": 20, "angle": 2, "parent": "legFR_A", "attachRatio": 1.0, "anim": "knee_back" },
+
+        { "name": "legBL_A", "type": "bone", "len": 45, "width": 30, "widthEnd": 25, "angle": 85, "parent": "torso", "attachRatio": 0.12, "anim": "walk_opp" },
+        { "name": "legBL_B", "type": "bone", "len": 35, "width": 24, "widthEnd": 22, "angle": 5, "parent": "legBL_A", "attachRatio": 1.0, "anim": "knee_fwd" },
+        
+        { "name": "legBR_A", "type": "bone", "len": 45, "width": 30, "widthEnd": 25, "angle": 85, "parent": "torso", "attachRatio": 0.12, "anim": "walk" },
+        { "name": "legBR_B", "type": "bone", "len": 35, "width": 24, "widthEnd": 22, "angle": 5, "parent": "legBR_A", "attachRatio": 1.0, "anim": "knee_fwd" }
+      ]
+    }
+  },
+  "horse": {
+    "id": "horse",
+    "name": "Caballo Salvaje",
+    "type": "vertebrate",
+    "config": {
+      "colorSkin": [20, 35],
+      "colorDetail": [10, 20],
+      "scale": 1.0,
+      "speed": 0.005,
+      "hasFur": true,
+      "structure": [
+        { "name": "torso", "type": "bone", "len": 75, "width": 40, "widthEnd": 34, "angle": 0, "parent": null, "anim": "bob" },
+        
+        { "name": "neck", "type": "bone", "len": 40, "width": 18, "widthEnd": 12, "angle": -55, "parent": "torso", "attachRatio": 0.92, "anim": "look" },
+        { "name": "head", "type": "head_cranial", "len": 26, "width": 15, "widthEnd": 10, "angle": 45, "parent": "neck", "attachRatio": 1.0, "anim": "look" },
+        { "name": "snout", "type": "head_snout", "len": 16, "width": 11, "widthEnd": 7, "angle": 0, "parent": "head", "attachRatio": 0.9, "anim": "none" },
+        
+        { "name": "earL", "type": "bone", "len": 10, "width": 5, "angle": -100, "parent": "head", "attachRatio": 0.2, "anim": "ear" },
+        { "name": "mane", "type": "bone", "len": 30, "width": 6, "angle": 170, "parent": "neck", "attachRatio": 0.6, "anim": "none" },
+
+        { "name": "tail", "type": "bone", "len": 55, "width": 8, "angle": 140, "parent": "torso", "attachRatio": 0.02, "anim": "tail" },
+
+        { "name": "legFL_A", "type": "bone", "len": 36, "width": 14, "widthEnd": 10, "angle": 82, "parent": "torso", "attachRatio": 0.85, "anim": "walk" },
+        { "name": "legFL_B", "type": "bone", "len": 30, "width": 10, "widthEnd": 8, "angle": 5, "parent": "legFL_A", "attachRatio": 1.0, "anim": "knee_back" },
+        { "name": "hoofFL", "type": "hoof", "len": 10, "width": 10, "angle": 0, "parent": "legFL_B", "attachRatio": 1.0, "anim": "none" },
+
+        { "name": "legFR_A", "type": "bone", "len": 36, "width": 14, "widthEnd": 10, "angle": 82, "parent": "torso", "attachRatio": 0.85, "anim": "walk_opp" },
+        { "name": "legFR_B", "type": "bone", "len": 30, "width": 10, "widthEnd": 8, "angle": 5, "parent": "legFR_A", "attachRatio": 1.0, "anim": "knee_back" },
+        { "name": "hoofFR", "type": "hoof", "len": 10, "width": 10, "angle": 0, "parent": "legFR_B", "attachRatio": 1.0, "anim": "none" },
+
+        { "name": "legBL_A", "type": "bone", "len": 40, "width": 22, "widthEnd": 15, "angle": 78, "parent": "torso", "attachRatio": 0.15, "anim": "walk_opp" },
+        { "name": "legBL_B", "type": "bone", "len": 34, "width": 12, "widthEnd": 10, "angle": -8, "parent": "legBL_A", "attachRatio": 1.0, "anim": "knee_fwd" },
+        { "name": "hoofBL", "type": "hoof", "len": 10, "width": 10, "angle": 8, "parent": "legBL_B", "attachRatio": 1.0, "anim": "none" },
+
+        { "name": "legBR_A", "type": "bone", "len": 40, "width": 22, "widthEnd": 15, "angle": 78, "parent": "torso", "attachRatio": 0.15, "anim": "walk" },
+        { "name": "legBR_B", "type": "bone", "len": 34, "width": 12, "widthEnd": 10, "angle": -8, "parent": "legBR_A", "attachRatio": 1.0, "anim": "knee_fwd" },
+        { "name": "hoofBR", "type": "hoof", "len": 10, "width": 10, "angle": 8, "parent": "legBR_B", "attachRatio": 1.0, "anim": "none" }
+      ]
+    }
+  }
+}

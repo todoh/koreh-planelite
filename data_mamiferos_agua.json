@@ -1,0 +1,26 @@
+{
+  "whale_blue": {
+    "id": "whale_blue",
+    "name": "Ballena Azul",
+    "type": "aquatic_mammal",
+    "config": {
+      "length": 150,
+      "width": 50,
+      "colorSkin": [200, 220],
+      "tailType": "fluke",
+      "speed": 0.001
+    }
+  },
+  "dolphin_echo": {
+    "id": "dolphin_echo",
+    "name": "Delfín Saltarín",
+    "type": "aquatic_mammal",
+    "config": {
+      "length": 80,
+      "width": 25,
+      "colorSkin": [190, 210],
+      "tailType": "fluke",
+      "speed": 0.006
+    }
+  }
+}

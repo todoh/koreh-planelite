@@ -1,0 +1,75 @@
+{
+  "eagle_gold": {
+    "id": "eagle_gold",
+    "name": "Águila Real",
+    "type": "bird",
+    "config": {
+      "span": 160,
+      "bodyScale": 1.0,
+      "colors": {
+        "head": [35, 45],
+        "torso": [25, 35],
+        "wingPrimary": [20, 30],
+        "wingCovert": [30, 40],
+        "tail": [25, 35],
+        "beak": "#fb0",
+        "talons": "#222"
+      },
+      "wingShape": "broad_soar",
+      "tailShape": "fan_wedge",
+      "beakShape": "hook_heavy",
+      "eyeSize": 1.3,
+      "soarEfficiency": 0.8,
+      "flapSpeed": 0.0008
+    }
+  },
+  "peregrine_falcon": {
+    "id": "peregrine_falcon",
+    "name": "Halcón Peregrino",
+    "type": "bird",
+    "config": {
+      "span": 110,
+      "bodyScale": 0.8,
+      "colors": {
+        "head": [220, 240],
+        "torso": [230, 250],
+        "wingPrimary": [210, 230],
+        "wingCovert": [220, 240],
+        "tail": [210, 230],
+        "beak": "#444",
+        "talons": "#fb0"
+      },
+      "wingShape": "pointed_fast",
+      "tailShape": "narrow_square",
+      "beakShape": "hook_sharp",
+      "eyeSize": 1.3,
+      "soarEfficiency": 0.3,
+      "flapSpeed": 0.002
+    }
+  },
+  "owl_great_horned": {
+    "id": "owl_great_horned",
+    "name": "Búho Cornudo",
+    "type": "bird",
+    "config": {
+      "span": 140,
+      "bodyScale": 1.1,
+      "colors": {
+        "head": [25, 35],
+        "torso": [30, 40],
+        "wingPrimary": [25, 35],
+        "wingCovert": [35, 45],
+        "tail": [30, 40],
+        "beak": "#333",
+        "talons": "#111"
+      },
+      "wingShape": "broad_silent",
+      "tailShape": "round",
+      "beakShape": "hook_buried",
+      "eyeSize": 1.3,
+      "earTufts": true,
+      "soarEfficiency": 0.6,
+      "flapSpeed": 0.001
+    }
+  }
+}

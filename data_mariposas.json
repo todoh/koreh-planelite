@@ -1,0 +1,26 @@
+{
+  "monarch_pro": {
+    "id": "monarch_pro",
+    "name": "Monarca Procedural",
+    "type": "butterfly",
+    "config": {
+      "wingSize": 60,
+      "patternComplexity": 0.8,
+      "colorPri": [20, 40],
+      "colorSec": [0, 10],
+      "flapSpeed": 0.1
+    }
+  },
+  "morpho_blue": {
+    "id": "morpho_blue",
+    "name": "Morpho Azul",
+    "type": "butterfly",
+    "config": {
+      "wingSize": 75,
+      "patternComplexity": 0.4,
+      "colorPri": [200, 240],
+      "colorSec": [180, 200],
+      "flapSpeed": 0.05
+    }
+  }
+}

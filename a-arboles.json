@@ -1,0 +1,404 @@
+{
+  "pine": {
+    "id": "pine",
+    "name": "Pino Nórdico",
+    "type": "tree",
+    "config": {
+      "colorBranch": [30, 40],
+      "colorLeaf": [120, 150],
+      "branchAngle": { "min": 0.3, "max": 0.5 },
+      "lengthDecay": 0.85,
+      "widthDecay": 0.7,
+      "gravity": -0.05,
+      "leafShape": "line",
+      "startLengthFactor": 0.2
+    }
+  },
+  "birch": {
+    "id": "birch",
+    "name": "Abedul Plateado",
+    "type": "tree",
+    "config": {
+      "colorBranch": [0, 10],
+      "colorLeaf": [70, 90],
+      "branchAngle": { "min": 0.2, "max": 0.4 },
+      "lengthDecay": 0.8,
+      "widthDecay": 0.6,
+      "gravity": 0.05,
+      "leafShape": "circle",
+      "startLengthFactor": 0.25
+    }
+  },
+  "maple": {
+    "id": "maple",
+    "name": "Arce Rojo",
+    "type": "tree",
+    "config": {
+      "colorBranch": [20, 30],
+      "colorLeaf": [0, 20],
+      "branchAngle": { "min": 0.5, "max": 0.9 },
+      "lengthDecay": 0.75,
+      "widthDecay": 0.7,
+      "gravity": 0.02,
+      "leafShape": "flower",
+      "startLengthFactor": 0.22
+    }
+  },
+  "baobab": {
+    "id": "baobab",
+    "name": "Baobab Africano",
+    "type": "tree",
+    "config": {
+      "colorBranch": [35, 45],
+      "colorLeaf": [80, 100],
+      "branchAngle": { "min": 0.6, "max": 1.0 },
+      "lengthDecay": 0.6,
+      "widthDecay": 0.4,
+      "gravity": 0.01,
+      "leafShape": "circle",
+      "startLengthFactor": 0.15
+    }
+  },
+  "acacia": {
+    "id": "acacia",
+    "name": "Acacia de Sabana",
+    "type": "tree",
+    "config": {
+      "colorBranch": [30, 40],
+      "colorLeaf": [60, 80],
+      "branchAngle": { "min": 0.8, "max": 1.2 },
+      "lengthDecay": 0.7,
+      "widthDecay": 0.7,
+      "gravity": -0.02,
+      "leafShape": "line",
+      "startLengthFactor": 0.2
+    }
+  },
+  "cypress": {
+    "id": "cypress",
+    "name": "Ciprés Antiguo",
+    "type": "tree",
+    "config": {
+      "colorBranch": [25, 35],
+      "colorLeaf": [100, 130],
+      "branchAngle": { "min": 0.1, "max": 0.2 },
+      "lengthDecay": 0.9,
+      "widthDecay": 0.8,
+      "gravity": -0.1,
+      "leafShape": "line",
+      "startLengthFactor": 0.18
+    }
+  },
+  "jacaranda": {
+    "id": "jacaranda",
+    "name": "Jacaranda Violeta",
+    "type": "tree",
+    "config": {
+      "colorBranch": [20, 30],
+      "colorLeaf": [260, 290],
+      "branchAngle": { "min": 0.4, "max": 0.7 },
+      "lengthDecay": 0.75,
+      "widthDecay": 0.65,
+      "gravity": 0.03,
+      "leafShape": "flower",
+      "startLengthFactor": 0.23
+    }
+  },
+  "olive": {
+    "id": "olive",
+    "name": "Olivo Centenario",
+    "type": "tree",
+    "config": {
+      "colorBranch": [40, 50],
+      "colorLeaf": [90, 110],
+      "branchAngle": { "min": 0.5, "max": 0.8 },
+      "lengthDecay": 0.7,
+      "widthDecay": 0.7,
+      "gravity": 0.08,
+      "leafShape": "circle",
+      "startLengthFactor": 0.2
+    }
+  },
+  "golden_poplar": {
+    "id": "golden_poplar",
+    "name": "Álamo Dorado",
+    "type": "tree",
+    "config": {
+      "colorBranch": [30, 40],
+      "colorLeaf": [45, 65],
+      "branchAngle": { "min": 0.2, "max": 0.4 },
+      "lengthDecay": 0.82,
+      "widthDecay": 0.7,
+      "gravity": -0.02,
+      "leafShape": "flower",
+      "startLengthFactor": 0.28
+    }
+  },
+  "palm_sim": {
+    "id": "palm_sim",
+    "name": "Palma Datilera",
+    "type": "tree",
+    "config": {
+      "colorBranch": [25, 35],
+      "colorLeaf": [100, 140],
+      "branchAngle": { "min": 0.1, "max": 1.5 },
+      "lengthDecay": 0.5,
+      "widthDecay": 0.9,
+      "gravity": 0.3,
+      "leafShape": "line",
+      "startLengthFactor": 0.35
+    } }
+  ,
+  "rosal_bush": {
+    "id": "rosal_bush",
+    "name": "Rosal Silvestre",
+    "type": "tree",
+    "config": {
+      "colorBranch": [120, 130],
+      "colorLeaf": [340, 360],
+      "branchAngle": { "min": 0.5, "max": 0.9 },
+      "lengthDecay": 0.65,
+      "widthDecay": 0.6,
+      "gravity": 0.05,
+      "leafShape": "flower",
+      "startLengthFactor": 0.15
+    }
+  },
+  "olivo_es": {
+    "id": "olivo_es",
+    "name": "Olivo Mediterráneo",
+    "type": "tree",
+    "config": {
+      "colorBranch": [40, 50],
+      "colorLeaf": [80, 100],
+      "branchAngle": { "min": 0.4, "max": 0.7 },
+      "lengthDecay": 0.75,
+      "widthDecay": 0.7,
+      "gravity": 0.1,
+      "leafShape": "circle",
+      "startLengthFactor": 0.2
+    }
+  },
+  "abedul_silver": {
+    "id": "abedul_silver",
+    "name": "Abedul Blanco",
+    "type": "tree",
+    "config": {
+      "colorBranch": [20, 30],
+      "colorLeaf": [90, 110],
+      "branchAngle": { "min": 0.2, "max": 0.45 },
+      "lengthDecay": 0.8,
+      "widthDecay": 0.6,
+      "gravity": 0.12,
+      "leafShape": "line",
+      "startLengthFactor": 0.25
+    }
+  },
+  "nogal_common": {
+    "id": "nogal_common",
+    "name": "Nogal Real",
+    "type": "tree",
+    "config": {
+      "colorBranch": [25, 35],
+      "colorLeaf": [100, 130],
+      "branchAngle": { "min": 0.4, "max": 0.7 },
+      "lengthDecay": 0.72,
+      "widthDecay": 0.75,
+      "gravity": 0.02,
+      "leafShape": "circle",
+      "startLengthFactor": 0.22
+    }
+  },
+  "alcornoque_cork": {
+    "id": "alcornoque_cork",
+    "name": "Alcornoque Ibérico",
+    "type": "tree",
+    "config": {
+      "colorBranch": [15, 25],
+      "colorLeaf": [70, 90],
+      "branchAngle": { "min": 0.5, "max": 0.8 },
+      "lengthDecay": 0.68,
+      "widthDecay": 0.8,
+      "gravity": -0.01,
+      "leafShape": "circle",
+      "startLengthFactor": 0.18
+    }
+  },
+  "pine_nordic": {
+    "id": "pine_nordic",
+    "name": "Pino Nórdico",
+    "type": "tree",
+    "config": {
+      "growthType": "conifer",
+      "colorBranch": [20, 30],
+      "colorLeaf": [140, 160],
+      "scale": 1.2
+    }
+  },
+  "spruce_blue": {
+    "id": "spruce_blue",
+    "name": "Abeto Azul",
+    "type": "tree",
+    "config": {
+      "growthType": "conifer",
+      "colorBranch": [10, 20],
+      "colorLeaf": [170, 200],
+      "scale": 1.0
+    }
+  },
+  "bamboo_grove": {
+    "id": "bamboo_grove",
+    "name": "Bambú Gigante",
+    "type": "tree",
+    "config": {
+      "growthType": "segmented",
+      "colorBranch": [80, 100], 
+      "colorLeaf": [80, 120],
+      "clusterSize": 7,
+      "scale": 1.1
+    }
+  },
+  "sugar_cane": {
+    "id": "sugar_cane",
+    "name": "Caña de Azúcar",
+    "type": "tree",
+    "config": {
+      "growthType": "segmented",
+      "colorBranch": [60, 80],
+      "colorLeaf": [70, 90],
+      "clusterSize": 12,
+      "widthDecay": true,
+      "scale": 0.6
+    }
+  },
+  "cactus_saguaro": {
+    "id": "cactus_saguaro",
+    "name": "Saguaro del Desierto",
+    "type": "tree",
+    "config": {
+      "growthType": "cactus",
+      "subType": "saguaro",
+      "colorBranch": [0, 0],
+      "colorLeaf": [0, 0],
+      "scale": 1.3
+    }
+  },
+  "cactus_nopal": {
+    "id": "cactus_nopal",
+    "name": "Nopal / Chumbera",
+    "type": "tree",
+    "config": {
+      "growthType": "cactus",
+      "subType": "pad",
+      "colorBranch": [0, 0],
+      "colorLeaf": [0, 0],
+      "scale": 0.5
+    }
+  },
+  "palm_coco": {
+    "id": "palm_coco",
+    "name": "Palmera Cocotera",
+    "type": "tree",
+    "config": {
+      "growthType": "palm",
+      "colorBranch": [30, 45],
+      "colorLeaf": [70, 100],
+      "fruit": true,
+      "scale": 1.4
+    }
+  },
+  "palm_fan": {
+    "id": "palm_fan",
+    "name": "Palma de Abanico",
+    "type": "tree",
+    "config": {
+      "growthType": "palm",
+      "colorBranch": [20, 30],
+      "colorLeaf": [90, 120],
+      "fruit": false,
+      "scale": 0.8
+    }
+  },
+  "bush_berry": {
+    "id": "bush_berry",
+    "name": "Arbusto de Bayas",
+    "type": "tree",
+    "config": {
+      "growthType": "bush",
+      "colorBranch": [20, 30],
+      "colorLeaf": [50, 80],
+      "scale": 0.4,
+      "leafShape": "circle"
+    }
+  },
+  "water_lily": {
+    "id": "water_lily",
+    "name": "Nenúfar Real",
+    "type": "tree",
+    "config": {
+      "growthType": "floating",
+      "colorLeaf": [100, 140],
+      "hasFlower": true,
+      "scale": 1.0
+    }
+  },
+  "lotus_sacred": {
+    "id": "lotus_sacred",
+    "name": "Loto Sagrado",
+    "type": "tree",
+    "config": {
+      "growthType": "floating",
+      "colorLeaf": [120, 160],
+      "hasFlower": true,
+      "scale": 0.8
+    }
+  },
+  "oak_classic": {
+    "id": "oak_classic",
+    "name": "Roble Común",
+    "type": "tree",
+    "config": {
+      "growthType": "recursive",
+      "colorBranch": [30, 40],
+      "colorLeaf": [100, 140],
+      "branchAngle": { "min": 0.4, "max": 0.8 },
+      "lengthDecay": 0.7,
+      "widthDecay": 0.7,
+      "leafShape": "circle",
+      "startLengthFactor": 0.25
+    }
+  },
+  "willow_weeping": {
+    "id": "willow_weeping",
+    "name": "Sauce Llorón",
+    "type": "tree",
+    "config": {
+      "growthType": "recursive",
+      "colorBranch": [40, 50],
+      "colorLeaf": [70, 100],
+      "branchAngle": { "min": 0.2, "max": 0.5 },
+      "lengthDecay": 0.9,
+      "widthDecay": 0.8,
+      "gravity": 0.2,
+      "leafShape": "line",
+      "startLengthFactor": 0.20
+    }
+  },
+  "baobab_ancient": {
+    "id": "baobab_ancient",
+    "name": "Baobab",
+    "type": "tree",
+    "config": {
+      "growthType": "recursive",
+      "colorBranch": [35, 45],
+      "colorLeaf": [80, 100],
+      "branchAngle": { "min": 0.8, "max": 1.2 },
+      "lengthDecay": 0.6,
+      "widthDecay": 0.4,
+      "leafShape": "circle",
+      "startLengthFactor": 0.15
+    }
+  }
+}
+
+   

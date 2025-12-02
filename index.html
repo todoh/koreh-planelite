@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GÉNESIS.JS - Galería Procedural 3D (Volumétrica)</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+<body class="bg-black text-gray-100 min-h-screen flex flex-col selection:bg-cyan-500/30">
+
+    <header class="border-b border-gray-800 bg-black/80 backdrop-blur-md sticky top-0 z-20">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div>
+                <h1 class="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent flex items-center gap-2">
+                    GÉNESIS.JS <span class="text-xs bg-gray-800 text-cyan-400 px-2 py-0.5 rounded border border-gray-700">v3D</span>
+                </h1>
+                <p class="text-xs text-gray-500 tracking-widest mt-1">CATÁLOGO DE VIDA VOLUMÉTRICA</p>
+            </div>
+            <button onclick="App.downloadAll('png')" class="flex items-center gap-2 px-3 py-1.5 bg-gray-800  hover:bg-cyan-900 text-cyan-400 rounded text-xs font-bold border border-gray-700 transition-colors">
+                    <i data-lucide="download-cloud" class="w-4 h-4"></i> ZIP
+                </button>
+            <div class="flex flex-col md:flex-row gap-4 items-center">
+                <div style="width: 650px;" class="flex gap-2 overflow-x-auto pb-2 md:pb-0" id="filter-container">
+                    </div>
+                
+                <div class="w-px h-8 bg-gray-800 hidden md:block"></div>
+
+                
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1 max-w-7xl mx-auto px-6 py-8 w-full">
+        <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            </div>
+        
+        <div id="empty-state" class="hidden text-center text-gray-500 py-20 border-2 border-dashed border-gray-800 rounded-xl">
+            No hay especímenes en esta categoría.
+        </div>
+    </main>
+
+    <div id="modal-viewer" class="fixed inset-0 z-50 bg-black/95 flex items-center justify-center backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+        
+        <canvas id="fullscreen-canvas" class="absolute inset-0 w-full h-full outline-none"></canvas>
+        
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-4 bg-gray-800/80 px-6 py-3 rounded-full border border-gray-700 shadow-2xl backdrop-blur-md">
+            
+            <button onclick="Viewer.regenerate()" class="p-2 hover:bg-gray-700 rounded-full text-white transition-colors tooltip" title="Mutar ADN">
+                <i data-lucide="refresh-cw"></i>
+            </button>
+            
+            <button id="btn-play-pause" onclick="Viewer.togglePlay()" class="p-2 hover:bg-gray-700 rounded-full text-cyan-400 transition-colors">
+                <i data-lucide="pause" id="icon-play-pause"></i>
+            </button>
+
+            <div class="w-px h-8 bg-gray-600 mx-2"></div>
+
+            <button onclick="Viewer.close()" class="p-2 hover:bg-red-500/20 hover:text-red-400 rounded-full text-white transition-colors">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+
+        <div class="absolute top-8 left-8 text-white/50 font-mono text-sm pointer-events-none bg-black/30 p-4 rounded-lg border border-white/10 max-w-sm">
+            <h2 id="viewer-title" class="text-white text-xl font-bold mb-2"></h2>
+            <div id="viewer-info" class="space-y-1 text-xs"></div>
+        </div>
+    </div>
+
+    <div id="world-preview-modal" class="fixed inset-0 z-50 bg-black flex hidden">
+        <canvas id="world-canvas" class="absolute inset-0 w-full h-full block"></canvas>
+        
+        <div id="minimap-container" class="absolute bottom-6 left-6 w-48 h-48 rounded-lg overflow-hidden border-2 border-white/20 shadow-2xl transition-all duration-300 cursor-pointer bg-black hover:border-cyan-400 group select-none">
+    <canvas id="minimap-canvas" class="w-full h-full object-cover"></canvas>
+    
+    <div class="absolute top-2 right-2 bg-black/70 text-cyan-400 text-[10px] px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none layer-audience">
+        CLICK PARA EXPANDIR
+    </div>
+
+    <div id="minimap-controls" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1 opacity-0 pointer-events-none transition-all duration-300 translate-y-4">
+        <button data-zoom="1" class="zoom-btn active">x1</button>
+        <button data-zoom="2" class="zoom-btn">x2</button>
+        <button data-zoom="3" class="zoom-btn">x3</button>
+    </div>
+</div>
+
+        <div class="absolute top-4 left-4 bg-black/60 p-4 rounded border border-white/10 text-white font-mono text-sm pointer-events-none">
+            <h2 class="font-bold text-green-400 mb-2">EXPLORACIÓN PROCEDURAL</h2>
+            <p>Moverse: W, A, S, D</p>
+            <p>Cámara: Arrastrar Mouse</p>
+            <p>Bioma: Dinámico</p>
+        </div>
+
+        <button onclick="PreviewWorld.close()" class="absolute top-4 right-4 p-2 bg-red-900/50 hover:bg-red-800 text-white rounded font-bold border border-red-500/30 transition-colors">
+            SALIR AL LABORATORIO
+        </button>
+    </div>
+
+    <script type="module" src="main.js"></script>
+
+</body>
+</html>

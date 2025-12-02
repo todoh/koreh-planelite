@@ -1,0 +1,227 @@
+{
+  "oak": {
+    "id": "oak",
+    "name": "Roble Ancestral",
+    "type": "tree",
+    "config": {
+      "colorBranch": [30, 40],
+      "colorLeaf": [100, 140],
+      "branchAngle": { "min": 0.4, "max": 0.8 },
+      "lengthDecay": 0.7,
+      "widthDecay": 0.7,
+      "gravity": 0,
+      "leafShape": "circle",
+      "startLengthFactor": 0.25
+    }
+  },
+  "sakura": {
+    "id": "sakura",
+    "name": "Cerezo en Flor",
+    "type": "tree",
+    "config": {
+      "colorBranch": [10, 20],
+      "colorLeaf": [330, 350],
+      "branchAngle": { "min": 0.3, "max": 0.6 },
+      "lengthDecay": 0.8,
+      "widthDecay": 0.6,
+      "gravity": 0.02,
+      "leafShape": "flower",
+      "startLengthFactor": 0.22
+    }
+  },
+  "willow": {
+    "id": "willow",
+    "name": "Sauce Llorón",
+    "type": "tree",
+    "config": {
+      "colorBranch": [40, 50],
+      "colorLeaf": [70, 100],
+      "branchAngle": { "min": 0.2, "max": 0.5 },
+      "lengthDecay": 0.9,
+      "widthDecay": 0.8,
+      "gravity": 0.15,
+      "leafShape": "line",
+      "startLengthFactor": 0.20
+    }
+  },
+  "sunflower": {
+    "id": "sunflower",
+    "name": "Girasol Aureus",
+    "type": "flower",
+    "config": {
+      "petalCount": 400,
+      "centerRatio": 0.3,
+      "spread": 6,
+      "colorPetal": [45, 60],
+      "colorCenter": [20, 30],
+      "petalShape": "pointed",
+      "petalWidth": 1.5,
+      "petalBend": [-0.1, 0.1],
+      "petalSat": 85,
+      "petalLit": 55
+    }
+  },
+  "dahlia": {
+    "id": "dahlia",
+    "name": "Dalia Geométrica",
+    "type": "flower",
+    "config": {
+      "petalCount": 600,
+      "centerRatio": 0.05,
+      "spread": 4,
+      "colorPetal": [300, 340],
+      "colorCenter": [50, 60],
+      "petalShape": "round",
+      "petalWidth": 2.5,
+      "petalBend": [0.2, 0.5],
+      "petalSat": 70,
+      "petalLit": 60
+    }
+  },
+  "blue_aster": {
+    "id": "blue_aster",
+    "name": "Áster Celestial",
+    "type": "flower",
+    "config": {
+      "petalCount": 200,
+      "centerRatio": 0.2,
+      "spread": 7,
+      "colorPetal": [200, 240],
+      "colorCenter": [40, 50],
+      "petalShape": "thin",
+      "petalWidth": 0.5,
+      "petalBend": [-0.05, 0.05],
+      "petalSat": 65,
+      "petalLit": 70
+    }
+  },
+  "amapola_blanca": {
+    "id": "amapola_blanca",
+    "name": "Amapola Blanca",
+    "type": "flower",
+    "config": {
+      "petalCount": 6,
+      "centerRatio": 0.15,
+      "spread": 4,
+      "colorPetal": [0, 0],
+      "colorCenter": [50, 60],
+      "petalShape": "round",
+      "petalWidth": 2.5,
+      "petalSat": 5,
+      "petalLit": 90,
+      "petalBend": [-0.3, 0.1]
+    }
+  },
+  "margarita": {
+    "id": "margarita",
+    "name": "Margarita Silvestre",
+    "type": "flower",
+    "config": {
+      "petalCount": 25,
+      "centerRatio": 0.25,
+      "spread": 4.5,
+      "colorPetal": [0, 0],
+      "colorCenter": [45, 55],
+      "petalShape": "thin",
+      "petalWidth": 0.8,
+      "petalSat": 0,
+      "petalLit": 98,
+      "petalBend": [0.0, 0.05]
+    }
+  },
+  "tulip": {
+    "id": "tulip",
+    "name": "Tulipán Holandés",
+    "type": "flower",
+    "config": {
+      "petalCount": 6,
+      "centerRatio": 0.1,
+      "spread": 3.0,
+      "colorPetal": [330, 360],
+      "colorCenter": [50, 60],
+      "petalShape": "round",
+      "petalWidth": 2.2,
+      "petalSat": 80,
+      "petalLit": 50,
+      "petalBend": [-1.0, -0.6]
+    }
+  },
+  "orchid": {
+    "id": "orchid",
+    "name": "Orquídea Phalaenopsis",
+    "type": "flower",
+    "config": {
+      "petalCount": 5,
+      "centerRatio": 0.1,
+      "spread": 5,
+      "colorPetal": [280, 310],
+      "colorCenter": [330, 350],
+      "petalShape": "pointed",
+      "petalWidth": 1.8,
+      "petalSat": 60,
+      "petalLit": 70,
+      "petalBend": [-0.2, 0.1]
+    }
+  },
+  "carnation": {
+    "id": "carnation",
+    "name": "Clavel Rojo",
+    "type": "flower",
+    "config": {
+      "petalCount": 40,
+      "centerRatio": 0.1,
+      "spread": 3.5,
+      "colorPetal": [350, 10],
+      "colorCenter": [0, 0],
+      "petalShape": "round",
+      "petalWidth": 1.2,
+      "petalSat": 80,
+      "petalLit": 50,
+      "petalBend": [-0.5, 0.5]
+    }
+  },
+  "snake": {
+    "id": "snake",
+    "name": "Serpiente Ondulante",
+    "type": "animal",
+    "config": {
+      "segments": 40,
+      "baseSize": 15,
+      "colorBody": [100, 140],
+      "legs": false,
+      "speed": 0.008,
+      "waveAmplitude": 30,
+      "headType": "round"
+    }
+  },
+  "centipede": {
+    "id": "centipede",
+    "name": "Miriápodo Ágil",
+    "type": "animal",
+    "config": {
+      "segments": 20,
+      "baseSize": 12,
+      "colorBody": [10, 30],
+      "legs": true,
+      "legLength": 40,
+      "speed": 0.012,
+      "waveAmplitude": 15,
+      "headType": "antenna"
+    }
+  },
+  "beetle": {
+    "id": "beetle",
+    "name": "Escarabajo Acorazado",
+    "type": "animal",
+    "config": {
+      "segments": 6,
+      "baseSize": 35,
+      "colorBody": [260, 290],
+      "legs": true,
+      "legLength": 30,
+      "speed": 0.002,
+      "waveAmplitude": 5,
+      "headType": "pincers"
+    }
+  }
+}

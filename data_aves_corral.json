@@ -1,0 +1,28 @@
+{
+  "rooster_alpha": {
+    "id": "rooster_alpha",
+    "name": "Gallo Alpha",
+    "type": "bird",
+    "config": {
+      "span": 40,
+      "colorFeather": [0, 20],
+      "beakType": "peck",
+      "tailType": "vertical",
+      "crest": true,
+      "soar": false
+    }
+  },
+  "peacock_sim": {
+    "id": "peacock_sim",
+    "name": "Pavo Real Digital",
+    "type": "bird",
+    "config": {
+      "span": 60,
+      "colorFeather": [180, 220],
+      "beakType": "peck",
+      "tailType": "fan_huge",
+      "crest": true,
+      "soar": false
+    }
+  }
+}

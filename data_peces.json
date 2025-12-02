@@ -1,0 +1,26 @@
+{
+  "koi_fish": {
+    "id": "koi_fish",
+    "name": "Koi Zen",
+    "type": "fish",
+    "config": {
+      "length": 60,
+      "width": 20,
+      "colorScale": [0, 20],
+      "finType": "flow",
+      "speed": 0.01
+    }
+  },
+  "betta_warrior": {
+    "id": "betta_warrior",
+    "name": "Betta Luchador",
+    "type": "fish",
+    "config": {
+      "length": 40,
+      "width": 12,
+      "colorScale": [240, 280],
+      "finType": "veil",
+      "speed": 0.008
+    }
+  }
+}

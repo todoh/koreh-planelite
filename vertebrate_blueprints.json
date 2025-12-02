@@ -1,0 +1,41 @@
+{
+  "deer": {
+    "id": "deer",
+    "name": "Ciervo Procedural",
+    "type": "vertebrate",
+    "config": {
+      "colorSkin": [25, 35],
+      "colorDetail": [15, 20],
+      "scale": 1.0,
+      "speed": 0.004,
+      "hasFur": true,
+      "structure": [
+        { "name": "torso", "type": "bone", "len": 70, "width": 35, "widthEnd": 30, "angle": 0, "parent": null, "anim": "bob" },
+        
+        { "name": "neck", "type": "bone", "len": 35, "width": 18, "widthEnd": 12, "angle": -60, "parent": "torso", "attachRatio": 0.9, "anim": "look" },
+        { "name": "head", "type": "head", "len": 28, "width": 15, "widthEnd": 8, "angle": -30, "parent": "neck", "attachRatio": 1.0, "anim": "look" },
+        
+        { "name": "earL", "type": "bone", "len": 15, "width": 5, "angle": -100, "parent": "head", "attachRatio": 0.1, "anim": "ear" },
+        { "name": "earR", "type": "bone", "len": 15, "width": 5, "angle": -80, "parent": "head", "attachRatio": 0.1, "anim": "ear" },
+
+        { "name": "tail", "type": "bone", "len": 15, "width": 8, "angle": 160, "parent": "torso", "attachRatio": 0.05, "anim": "tail" },
+
+        { "name": "legFL_A", "type": "bone", "len": 30, "width": 14, "widthEnd": 10, "angle": 75, "parent": "torso", "attachRatio": 0.85, "anim": "walk" },
+        { "name": "legFL_B", "type": "bone", "len": 25, "width": 10, "widthEnd": 6, "angle": 10, "parent": "legFL_A", "attachRatio": 1.0, "anim": "knee_back" },
+        { "name": "hoofFL", "type": "hoof", "len": 10, "width": 8, "angle": 0, "parent": "legFL_B", "attachRatio": 1.0, "anim": "none" },
+
+        { "name": "legFR_A", "type": "bone", "len": 30, "width": 14, "widthEnd": 10, "angle": 75, "parent": "torso", "attachRatio": 0.85, "anim": "walk_opp" },
+        { "name": "legFR_B", "type": "bone", "len": 25, "width": 10, "widthEnd": 6, "angle": 10, "parent": "legFR_A", "attachRatio": 1.0, "anim": "knee_back" },
+        { "name": "hoofFR", "type": "hoof", "len": 10, "width": 8, "angle": 0, "parent": "legFR_B", "attachRatio": 1.0, "anim": "none" },
+
+        { "name": "legBL_A", "type": "bone", "len": 35, "width": 20, "widthEnd": 12, "angle": 70, "parent": "torso", "attachRatio": 0.15, "anim": "walk_opp" },
+        { "name": "legBL_B", "type": "bone", "len": 30, "width": 12, "widthEnd": 8, "angle": -20, "parent": "legBL_A", "attachRatio": 1.0, "anim": "knee_fwd" },
+        { "name": "hoofBL", "type": "hoof", "len": 10, "width": 8, "angle": 10, "parent": "legBL_B", "attachRatio": 1.0, "anim": "none" },
+
+        { "name": "legBR_A", "type": "bone", "len": 35, "width": 20, "widthEnd": 12, "angle": 70, "parent": "torso", "attachRatio": 0.15, "anim": "walk" },
+        { "name": "legBR_B", "type": "bone", "len": 30, "width": 12, "widthEnd": 8, "angle": -20, "parent": "legBR_A", "attachRatio": 1.0, "anim": "knee_fwd" },
+        { "name": "hoofBR", "type": "hoof", "len": 10, "width": 8, "angle": 10, "parent": "legBR_B", "attachRatio": 1.0, "anim": "none" }
+      ]
+    }
+  }
+}

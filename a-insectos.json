@@ -1,0 +1,151 @@
+{
+  "caterpillar": {
+    "id": "caterpillar",
+    "name": "Oruga Monarca",
+    "type": "animal",
+    "config": {
+      "segments": 15,
+      "baseSize": 20,
+      "colorBody": [90, 120],
+      "legs": true,
+      "legLength": 15,
+      "speed": 0.005,
+      "waveAmplitude": 10,
+      "headType": "round"
+    }
+  },
+  "earthworm": {
+    "id": "earthworm",
+    "name": "Lombriz de Tierra",
+    "type": "animal",
+    "config": {
+      "segments": 30,
+      "baseSize": 10,
+      "colorBody": [350, 10],
+      "legs": false,
+      "speed": 0.003,
+      "waveAmplitude": 20,
+      "headType": "round"
+    }
+  },
+  "scorpion_sim": {
+    "id": "scorpion_sim",
+    "name": "Escorpión de Arena",
+    "type": "animal",
+    "config": {
+      "segments": 10,
+      "baseSize": 25,
+      "colorBody": [40, 50],
+      "legs": true,
+      "legLength": 35,
+      "speed": 0.004,
+      "waveAmplitude": 5,
+      "headType": "pincers"
+    }
+  },
+  "earwig": {
+    "id": "earwig",
+    "name": "Tijereta Común",
+    "type": "animal",
+    "config": {
+      "segments": 12,
+      "baseSize": 15,
+      "colorBody": [20, 30],
+      "legs": true,
+      "legLength": 20,
+      "speed": 0.01,
+      "waveAmplitude": 8,
+      "headType": "pincers"
+    }
+  },
+  "silverfish": {
+    "id": "silverfish",
+    "name": "Pececillo de Plata",
+    "type": "animal",
+    "config": {
+      "segments": 10,
+      "baseSize": 18,
+      "colorBody": [200, 220],
+      "legs": true,
+      "legLength": 25,
+      "speed": 0.015,
+      "waveAmplitude": 12,
+      "headType": "antenna"
+    }
+  },
+  "silkworm": {
+    "id": "silkworm",
+    "name": "Gusano de Seda",
+    "type": "animal",
+    "config": {
+      "segments": 18,
+      "baseSize": 22,
+      "colorBody": [0, 0],
+      "legs": true,
+      "legLength": 10,
+      "speed": 0.004,
+      "waveAmplitude": 8,
+      "headType": "round"
+    }
+  },
+  "glowworm": {
+    "id": "glowworm",
+    "name": "Larva de Luciérnaga",
+    "type": "animal",
+    "config": {
+      "segments": 12,
+      "baseSize": 15,
+      "colorBody": [60, 80],
+      "legs": true,
+      "legLength": 12,
+      "speed": 0.006,
+      "waveAmplitude": 10,
+      "headType": "antenna"
+    }
+  },
+  "tiger_centipede": {
+    "id": "tiger_centipede",
+    "name": "Ciempiés Tigre",
+    "type": "animal",
+    "config": {
+      "segments": 25,
+      "baseSize": 18,
+      "colorBody": [20, 40],
+      "legs": true,
+      "legLength": 30,
+      "speed": 0.012,
+      "waveAmplitude": 25,
+      "headType": "antenna"
+    }
+  },
+  "woodlouse": {
+    "id": "woodlouse",
+    "name": "Cochinilla",
+    "type": "animal",
+    "config": {
+      "segments": 7,
+      "baseSize": 30,
+      "colorBody": [230, 250],
+      "legs": true,
+      "legLength": 15,
+      "speed": 0.003,
+      "waveAmplitude": 2,
+      "headType": "antenna"
+    }
+  },
+  "sandworm": {
+    "id": "sandworm",
+    "name": "Nereis de Arena",
+    "type": "animal",
+    "config": {
+      "segments": 45,
+      "baseSize": 12,
+      "colorBody": [0, 30],
+      "legs": true,
+      "legLength": 25,
+      "speed": 0.01,
+      "waveAmplitude": 35,
+      "headType": "pincers"
+    }
+  }
+}

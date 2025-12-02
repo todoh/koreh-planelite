@@ -1,0 +1,120 @@
+/* Fuentes */
+body { font-family: 'Inter', sans-serif; }
+.font-mono { font-family: 'JetBrains Mono', monospace; }
+
+/* Canvas Reset */
+canvas { touch-action: none; }
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar { 
+    width: 8px; 
+    height: 8px; 
+}
+::-webkit-scrollbar-track { 
+    background: #111827; /* gray-900 */
+}
+::-webkit-scrollbar-thumb { 
+    background: #374151; /* gray-700 */
+    border-radius: 4px; 
+}
+::-webkit-scrollbar-thumb:hover { 
+    background: #4b5563; /* gray-600 */
+}
+
+/* Tooltip simple */
+.tooltip:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    white-space: nowrap;
+    pointer-events: none;
+    margin-bottom: 5px;
+}
+
+/* ESTILOS DEL MINIMAPA EXPANDIDO */
+#minimap-container.expanded {
+    width: min(80vw, 800px);
+    height: min(80vh, 800px);
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    border-color: #22d3ee; /* cyan-400 */
+    z-index: 60;
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+}
+
+/* Oscurecer fondo cuando mapa expandido */
+#minimap-container.expanded::before {
+    content: '';
+    position: fixed;
+    top: -5000px; left: -5000px;
+    right: -5000px; bottom: -5000px;
+    background: rgba(0,0,0,0.7);
+    z-index: -1;
+    pointer-events: none;
+}
+/* EN styles.css */
+
+/* ESTILOS DEL MINIMAPA EXPANDIDO (Ya existentes, solo como referencia) */
+#minimap-container.expanded {
+    /* ... resto de propiedades existentes ... */
+    cursor: default; /* Cambiar cursor al estar expandido */
+}
+
+/* MOSTRAR CONTROLES AL EXPANDIR */
+/* Cuando está expandido, hacemos visibles los controles y activamos sus eventos */
+#minimap-container.expanded #minimap-controls {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, 0); /* Reseteamos la translación Y */
+}
+
+/* OCULTAR ETIQUETA AL EXPANDIR */
+#minimap-container.expanded .layer-audience {
+    display: none;
+}
+
+/* ESTILO DE BOTONES DE ZOOM */
+.zoom-btn {
+    background: rgba(0, 0, 0, 0.7);
+    color: #888;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 4px 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.zoom-btn:first-child { border-radius: 4px 0 0 4px; }
+.zoom-btn:last-child { border-radius: 0 4px 4px 0; }
+
+.zoom-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+/* Estado activo del botón */
+.zoom-btn.active {
+    background: rgba(34, 211, 238, 0.2); /* cyan-400 con opacidad */
+    color: #22d3ee; /* cyan-400 */
+    border-color: #22d3ee;
+    font-weight: bold;
+}
